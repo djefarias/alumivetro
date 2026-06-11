@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import {
   ArrowUpRight, ArrowDown, ChevronDown, Globe, ShieldCheck, Ruler,
-  Wrench, FileText, MessageCircle, Instagram, X, Plus, Minus, Check,
+  Wrench, FileText, MessageSquare, Camera, X, Plus, Minus, Check,
 } from "lucide-react";
 import fotos from "@/data/fotos";
 
@@ -356,10 +356,10 @@ export default function HomePage() {
           </motion.p>
           <motion.div {...fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <a href="https://wa.me/5544999554709" target="_blank" rel="noopener" className="bg-[#C4956A] hover:bg-[#b88655] text-[#1C1C1C] font-[600] px-8 py-4 rounded-full text-sm transition-all inline-flex items-center gap-2 group">
-              <MessageCircle size={18} /> Fale pelo WhatsApp <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <MessageSquare size={18} /> Fale pelo WhatsApp <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
             <a href="https://www.instagram.com/alumivetro" target="_blank" rel="noopener" className="border border-white/20 text-white/80 hover:text-white hover:border-white/40 px-8 py-4 rounded-full text-sm transition-all inline-flex items-center gap-2">
-              <Instagram size={18} /> Instagram
+              <Camera size={18} /> Instagram
             </a>
           </motion.div>
           <motion.div {...fadeUp} className="flex justify-center gap-10 text-sm text-white/20 pt-8">
