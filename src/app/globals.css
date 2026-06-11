@@ -1,38 +1,22 @@
-:root {
-  --primary: #0A6162;
-  --primary-light: #0d7a7b;
-  --primary-dark: #074748;
-  --accent: #070707;
-  --accent-light: #333333;
-  --neutral: #FDFEFE;
-  --gray-support: #D9D9D9;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply text-gray-800 antialiased bg-[#FDFEFE];
-  }
-  ::selection {
-    background-color: #0A6162;
-    color: #FDFEFE;
-  }
+:root {
+  --lead: #1C1C1C;
+  --concrete: #E8E6E1;
+  --copper: #C4956A;
+  --copper-light: #d4a87e;
+  --coat: #F5F4F1;
 }
 
-@layer components {
-  .btn-primary {
-    @apply bg-[#070707] hover:bg-[#333333] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center gap-2;
-  }
-  .btn-outline {
-    @apply border-2 border-[#0A6162] text-[#0A6162] hover:bg-[#0A6162] hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center gap-2;
-  }
-  .section-badge {
-    @apply inline-flex items-center gap-2 bg-[#0A6162]/5 text-[#0A6162] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest;
-  }
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply text-[#1C1C1C] antialiased; }
+  ::selection { background-color: #C4956A; color: #F5F4F1; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-grid { background-image: radial-gradient(circle, rgba(28,28,28,0.06) 1px, transparent 1px); background-size: 32px 32px; }
 }

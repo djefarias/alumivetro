@@ -1,26 +1,25 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
-
-const inter = Inter({ subsets: ["latin"] })
+import "@fontsource/sora/400.css"
+import "@fontsource/sora/500.css"
+import "@fontsource/sora/600.css"
+import "@fontsource/sora/700.css"
+import "@fontsource/inter/400.css"
+import "@fontsource/inter/500.css"
+import "@fontsource/inter/600.css"
 
 export const metadata: Metadata = {
   icons: { icon: "/favicon.png" },
-  title: "AlumiVetro | Esquadrias de Alumínio e Vidros",
-  description: "Especializada em fabricação e instalação de esquadrias de alumínio e vidros. Atendemos Paranavaí e região. Portas, janelas, fachadas e mais.",
-  keywords: ["esquadrias de alumínio", "portas de alumínio", "janelas", "vidros", "Paranavaí", "AlumiVetro"],
+  title: "AlumiVetro | Esquadrias de Alumínio · Paranavaí PR",
+  description: "Projetos sob medida em esquadrias, brises e estruturas de alumínio. Equipe própria, materiais certificados, instalação profissional.",
+  keywords: ["esquadrias", "alumínio", "brises", "estruturas metálicas", "Paranavaí", "AlumiVetro"],
+  openGraph: { title: "AlumiVetro", description: "Esquadrias de alumínio sob medida", type: "website" },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-[#070707]`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
