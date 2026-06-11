@@ -11,10 +11,6 @@ export const metadata: Metadata = {
   keywords: ["esquadrias de alumínio", "portas de alumínio", "janelas", "vidros", "Paranavaí", "AlumiVetro"],
 }
 
-import Image from "next/image"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-
 export default function RootLayout({
   children,
 }: {
@@ -22,12 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <Header />
-        <main className="flex-1 pt-16">{children}</main>
-        <Footer />
+      <body className={`${inter.className} flex flex-col min-h-screen bg-[#070707]`}>
+        {children}
       </body>
     </html>
   )
-}
 }
