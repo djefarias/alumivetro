@@ -6,7 +6,6 @@
   --accent-light: #333333;
   --neutral: #FDFEFE;
   --gray-support: #D9D9D9;
-  --gray-light: #95A6A6;
 }
 
 @tailwind base;
@@ -20,19 +19,20 @@
   body {
     @apply text-gray-800 antialiased bg-[#FDFEFE];
   }
+  ::selection {
+    background-color: #0A6162;
+    color: #FDFEFE;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-[#070707] hover:bg-[#333333] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block;
+    @apply bg-[#070707] hover:bg-[#333333] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center gap-2;
   }
   .btn-outline {
-    @apply border-2 border-[#0A6162] text-[#0A6162] hover:bg-[#0A6162] hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block;
+    @apply border-2 border-[#0A6162] text-[#0A6162] hover:bg-[#0A6162] hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center gap-2;
   }
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold text-[#0A6162] mb-4;
-  }
-  .section-subtitle {
-    @apply text-lg text-gray-600 max-w-2xl mx-auto;
+  .section-badge {
+    @apply inline-flex items-center gap-2 bg-[#0A6162]/5 text-[#0A6162] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest;
   }
 }
